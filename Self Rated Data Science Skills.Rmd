@@ -1,0 +1,22 @@
+---
+title: "Self Data Science Profile"
+author: "David Julovich"
+date: "5/24/2019"
+output: 
+  html_document:
+    keep_md: true        
+---
+
+```{r}
+library(ggplot2)
+```
+
+
+# Self Rated Data Science Scores
+```{r, echo=FALSE}
+cat <- c("Computer Programming" , "Communication and Presentation Skills" , "Math" , "Statistics" , "Machine Learning" , "Data Visualization")
+val<- c(2,3,1,2,3,3)
+david_julovich <-c(cat,val)
+dj_profile <-data.frame(cat,val)
+ggplot(dj_profile, aes(cat)) + geom_bar(aes(y=stat(val)))
+```
